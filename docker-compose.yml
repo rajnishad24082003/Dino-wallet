@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: dino_db
+    restart: always
+    environment:
+      POSTGRES_USER: dino_user
+      POSTGRES_PASSWORD: dino_password
+      POSTGRES_DB: wallet_db
+    ports:
+      - "5438:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./seed.sql:/docker-entrypoint-initdb.d/seed.sql
+
+volumes:
+  pgdata:
