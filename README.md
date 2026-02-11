@@ -143,7 +143,7 @@ export class WalletService {
 
 ### 2. Idempotency (Double-Spend Protection)
 
-To ensure reliability over flaky networks, every transaction requires a unique `Idempotency-Key` header.
+To ensure reliability over flaulty networks, every transaction requires a unique `Idempotency-Key` header.
 
 * **Implementation:** Before processing, we check the `transactions` table for the key.
 * **Result:** If a request is retried (e.g., user clicks "Pay" twice), the second request is detected as a duplicate and rejected immediately without touching the balance.
