@@ -149,7 +149,7 @@ To ensure reliability over flaulty networks, every transaction requires a unique
 * **Result:** If a request is retried (e.g., user clicks "Pay" twice), the second request is detected as a duplicate and rejected immediately without touching the balance.
 
 
-![HLD](assets/HLD.png)
+![HLD](assets/HLD2.png)
 
 ### 3. Double-Entry Ledger
 
